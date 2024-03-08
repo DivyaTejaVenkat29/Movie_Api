@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-0g4!8c6(jz^l5oyr+&%)z^(uh#rbn(*dzb!p+@%7z3-tu=wuh8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel']
 
 
 # Application definition
@@ -77,18 +77,28 @@ WSGI_APPLICATION = "movie_api_project.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'mAxhGYxGrxOnBraMkNpQuQKTtqFoSFvw',
+        'HOST': 'roundhouse.proxy.rlwy.net',
+        'PORT': '49525',
     }
 }
 
-CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:4200',  # Add your Angular app's domain
-    'https://movie-crud-operations.netlify.app',
-]
+
+# CORS_ORIGIN_ALLOW_ALL = False
+# CORS_ORIGIN_WHITELIST = [
+#     'http://localhost:4200',  # Add your Angular app's domain
+# ]
 
 
 # Password validation
@@ -126,6 +136,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
