@@ -20,6 +20,6 @@ from movies import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('api/movies/',views.MovieListCreate.as_view()),
-    path('api/movies/<int:pk>/',views.MovieRetrieveUpdateDestroy.as_view()),
+    path('api/movie/',views.MovieListCreate.as_view()),
+    path('api/movie/<int:pk>/',views.MovieRetrieveUpdateDestroy.as_view()),
 ]

@@ -98,7 +98,7 @@ DATABASES = {
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:4200',  # Add your Angular app's domain
-    'https://movie-api-curd-operations.netlify.app/',
+    'https://movie-api-curd-operations.netlify.app',
 ]
 
 
