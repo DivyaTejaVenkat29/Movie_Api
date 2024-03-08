@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'movies',
     'rest_framework',
     'corsheaders',
+    'django.contrib.postgres'
 ]
 
 MIDDLEWARE = [
