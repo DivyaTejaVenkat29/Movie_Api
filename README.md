@@ -25,7 +25,7 @@ To run the project locally, follow these steps:
 3. Install dependencies: `pip install -r requirements.txt`
 4. Run the Django development server: `python manage.py runserver`
 
-The API will be accessible at `http://localhost:8000/api/movie/`.
+The API will be accessible at `https://movie-api-sooty.vercel.app/api/movie/`.
 
 ## API Endpoints
 
