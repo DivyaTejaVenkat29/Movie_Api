@@ -14,7 +14,7 @@ This project is a Django-based API for managing movie data. It provides endpoint
 - **Django**: Python-based web framework for building the API backend.
 - **Django REST Framework (DRF)**: Toolkit for building Web APIs in Django.
 - **Python**: Programming language used for backend development.
-- **SQLite**: Relational database management system used for storing movie data.
+- **Postgres**: Relational database management system used for storing movie data.
 
 ## Installation
 
